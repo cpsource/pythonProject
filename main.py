@@ -19,6 +19,19 @@ plt.title("Original dataset")
 
 # for test, exit here
 plt.show()
+#exit(0)
+
+# shuffle clusters
+rng = np.random.RandomState(0)
+row_idx = rng.permutation(data.shape[0])
+col_idx = rng.permutation(data.shape[1])
+data = data[row_idx][:, col_idx]
+
+plt.matshow(data, cmap=plt.cm.Blues)
+plt.title("Shuffled dataset")
+
+# for test,exit here
+plt.show()
 exit(0)
 
 def print_hi(name):
